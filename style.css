@@ -1,0 +1,110 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5372F0;
+}
+
+.wrapper {
+    padding: 35px;
+    overflow-x: hidden;
+    background: rgb(255, 255, 255);
+    max-width: 1000px;
+    border-radius: 13px;
+    position: relative;
+}
+
+.wrapper .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.icon:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, rgb(255, 255, 255) 70%, transparent);
+}
+
+.icon:last-child {
+    right: 0;
+    background: linear-gradient(-90deg, rgb(255, 255, 255) 70%, transparent);
+justify-content: flex-end;
+}
+
+.icon i {
+    width: 55px;
+    height: 55px;
+    background-color: rgb(206, 205, 205);
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.icon i:hover {
+    background: rgb(206, 205, 205);
+}
+
+.icon:first-child i {
+    margin-left: 15px;
+}
+
+.icon:last-child i {
+    margin-right: 15px;
+}
+
+.wrapper .tabs-box {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.tabs-box.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.tabs-box .tab {
+    font-size: 1.18rem;
+    white-space: nowrap;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid;
+    border-color: rgb(223, 221, 221);
+    padding: 13px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tabs-box .tab:hover{
+    background: #efedfb;
+  }
+
+.tabs-box.dragging .tab{
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabs-box .tab.active {
+    color: white;
+    background-color: #5372F0;
+    border-color: transparent;
+}
